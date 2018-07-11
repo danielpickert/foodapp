@@ -20,9 +20,10 @@ class App extends Component {
         </header>
         <p className="App-intro">
           To get started, click on the recipe that you want to browse.
+          
+          <Header name="Header" />
           <Display name="The dish you selected" />
           <Recipe name="Burger" />
-          <Header name="Header" />
           <Search name="Search" />
         </p>
       </div>
