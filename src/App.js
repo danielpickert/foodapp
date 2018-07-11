@@ -11,12 +11,8 @@ class App extends Component {
         <header className="App-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <h1 className="App-title">Welcome to The Recipe Hub</h1>
-          <div> A project designed by </div>
-          <h2>Daniel </h2>
-          <h2>Maseeh </h2>
-          <h2> && Michelle </h2>
         </header>
-        
+
         <p className="App-intro">
           To get started, search for a recipe!
 
