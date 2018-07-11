@@ -4,6 +4,7 @@ import "./Style/App.css";
 import Display from "./components/Display.js";
 import Recipe from "./components/Recipe.js";
 import Header from "./components/Header.js";
+import Search from "./components/Search";
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
           <Display name="The dish you selected" />
           <Recipe name="Burger" />
           <Header name="Header" />
+          <Search name="Search" />
         </p>
       </div>
     );
