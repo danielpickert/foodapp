@@ -6,7 +6,7 @@ class Display extends Component {
     return (
       <div className="Display">
         <header className="Display-header">
-          <p>{this.props.name}</p>
+          <p>{this.props.name} gg </p>
         </header>
       </div>
     );
