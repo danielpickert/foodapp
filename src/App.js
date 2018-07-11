@@ -11,18 +11,19 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <Header name="Header" />
           <h1 className="App-title">Welcome The Recipe Hub</h1>
-          <div> A project designed by </div>
-          <h2>Daniel </h2>
-          <h2>Maseeh </h2>
-          <h2> && Michelle </h2>
+          {/* <div>
+            <h3>A project designed by</h3>
+            <h2>Daniel </h2>
+            <h2>Maseeh </h2>
+            <h2> && Michelle </h2>
+          </div> */}
         </header>
         <p className="App-intro">
           To get started, click on the recipe that you want to browse.
           <Display name="The dish you selected" />
           <Recipe name="Burger" />
-          <Header name="Header" />
           <Search name="Search" />
         </p>
       </div>
