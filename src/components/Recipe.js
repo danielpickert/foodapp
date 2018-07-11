@@ -5,10 +5,10 @@ import "../Style/Recipe.css";
 class Recipe extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <div className="Recipe">
+        <header className="Recipe-header">
           {/* <img src={logo} className="App-logo" alt="logo" /> */}
-          <h1 className="App-title">
+          <h1 className="Recipe-title">
             The recipe for {this.props.name} is below{" "}
           </h1>
         </header>
