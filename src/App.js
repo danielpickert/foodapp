@@ -17,12 +17,6 @@ const API_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
 
 
 class App extends Component {
-  // constructor() {
-  //   super() 
-  //     this.state = {
-  //       name: []
-
-  //   }
     state = {
       recipes: []
     }
@@ -47,46 +41,6 @@ class App extends Component {
       const recipes = JSON.stringify(this.state.recipes);
       localStorage.setItem("recipes", recipes);
     }
-    
-//     this.handleChange = this.handleChange.bind(this);
-//     this.handleSubmit = this.handleSubmit.bind(this);
-  
-// }
-
-// handleChange = event => {
-//   this.setState({ name: event.target.value });
-// };
-
-// handleSubmit = event => {
-//   event.preventDefault();
-
-//   const recipe = {
-//     name: this.state.name,
-//   };
-
-
-//  axios.post("http://localhost:3000/search/salt", {recipe})
-//    // .then(reply => {
-//    //   res.json(reply.data.recipes);
-//    // })
-//       .then(res=> {
-//         console.log(recipe)
-//       })
-
-// };
-
-
-
- 
-// componentDidMount() {
-//   axios.get("http://localhost:3000/search/salt")
-//     .then(res => {
-//     this.setState({ name: this.state.name });
-//     console.log(res.data[0].title)
-//     });
-//   }
-
-
 
 
   render() {
