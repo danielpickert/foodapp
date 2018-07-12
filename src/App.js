@@ -8,56 +8,63 @@ import "./Style/App.css";
 // import Display from "./components/Display.js";
 // import Recipe from "./components/Recipe.js";
 import axios from 'axios';
+import Form from './components/Form';
 
 // // API KEY for Food Recipes
 // const FOOD_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
 
 
 class App extends Component {
-  constructor() {
-    super() 
-      this.state = {
-        name: []
+  // constructor() {
+  //   super() 
+  //     this.state = {
+  //       name: []
 
+  //   }
+
+    getRecipe = (e) => {
+      const recipeName = e.target.elements.recipeName.value;
+      e.preventDefault();
+      console.log(recipeName)
     }
     
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+//     this.handleChange = this.handleChange.bind(this);
+//     this.handleSubmit = this.handleSubmit.bind(this);
   
-}
+// }
 
-handleChange = event => {
-  this.setState({ name: event.target.value });
-};
+// handleChange = event => {
+//   this.setState({ name: event.target.value });
+// };
 
-handleSubmit = event => {
-  event.preventDefault();
+// handleSubmit = event => {
+//   event.preventDefault();
 
-  const recipe = {
-    name: this.state.name,
-  };
+//   const recipe = {
+//     name: this.state.name,
+//   };
 
 
- axios.post("http://localhost:3000/search/salt", {recipe})
-   // .then(reply => {
-   //   res.json(reply.data.recipes);
-   // })
-      .then(res=> {
-        console.log(recipe)
-      })
+//  axios.post("http://localhost:3000/search/salt", {recipe})
+//    // .then(reply => {
+//    //   res.json(reply.data.recipes);
+//    // })
+//       .then(res=> {
+//         console.log(recipe)
+//       })
 
-};
+// };
 
 
 
  
-componentDidMount() {
-  axios.get("http://localhost:3000/search/salt")
-    .then(res => {
-    this.setState({ name: this.state.name });
-    console.log(res.data[0].title)
-    });
-  }
+// componentDidMount() {
+//   axios.get("http://localhost:3000/search/salt")
+//     .then(res => {
+//     this.setState({ name: this.state.name });
+//     console.log(res.data[0].title)
+//     });
+//   }
 
 
 
@@ -73,32 +80,14 @@ componentDidMount() {
             className="App-logo"
             alt="logo"
           />
+          
         </header>
         
-        <div className="Search">
-          To get started, search for a recipe!
-
-          <form onSubmit={this.handleSubmit} action="/search/" method="GET">
-            <label>
-            <input style={{ margin:"10px auto", display: "block", width: "140px" }} type="text" name="name" onChange={this.handleChange} placeholder="Name of dish or ingredient" />
-            <button type="submit">Submit</button>
-            </label>
-          </form>
+        <div className="Form">
+          <Form getRecipe={this.getRecipe} />
         </div>
 
-        <div className="Results">
-
-        {this.state.name}
-
-        </div>
-
-          </div>  
-          // className="App-intro">
-          // // <Display name="The dish you selected" />
-          // <Recipe name="Burger" />
-          // <Header name="Header" />
-          // <Search name="Search" />
-          // </p>
+      </div>
     
     );
   }
