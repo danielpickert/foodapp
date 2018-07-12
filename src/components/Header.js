@@ -11,7 +11,6 @@ class Header extends Component {
           <h1 className="Header-title">Welcome The Recipe Hub</h1>
           <div> A project designed Us  </div>
           
-         
         </header>
         <p className="Header-intro">
           To get started, click on the recipe that you want to browse.
