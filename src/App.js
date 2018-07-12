@@ -17,7 +17,7 @@ class App extends Component {
   constructor() {
     super() 
       this.state = {
-        name: undefined
+        name: []
 
     }
     
@@ -38,12 +38,12 @@ handleSubmit = event => {
   };
 
 
- axios.post("http://localhost:3000", {recipe})
+ axios.post("http://localhost:3000/search/salt", {recipe})
    // .then(reply => {
    //   res.json(reply.data.recipes);
    // })
       .then(res=> {
-        console.log(res)
+        console.log(recipe)
       })
 
 };
@@ -54,9 +54,8 @@ handleSubmit = event => {
 componentDidMount() {
   axios.get("http://localhost:3000/search/salt")
     .then(res => {
-    console.log(res.data)
-    this.setState({ img: res.data });
-      // this.setState({ title.value })
+    this.setState({ name: this.state.name });
+    console.log(res.data[0].title)
     });
   }
 
@@ -79,14 +78,18 @@ componentDidMount() {
         <div className="Search">
           To get started, search for a recipe!
 
-          {this.state.name}
-
           <form onSubmit={this.handleSubmit} action="/search/" method="GET">
             <label>
             <input style={{ margin:"10px auto", display: "block", width: "140px" }} type="text" name="name" onChange={this.handleChange} placeholder="Name of dish or ingredient" />
             <button type="submit">Submit</button>
             </label>
           </form>
+        </div>
+
+        <div className="Results">
+
+        {this.state.name}
+
         </div>
 
           </div>  
