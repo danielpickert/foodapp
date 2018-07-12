@@ -36,6 +36,17 @@ class App extends Component {
       this.setState({ recipes: data.recipes });
       console.log(this.state.recipes)
     }
+
+    componentDidMount = () => {
+      const json = localStorage.getItem("recipes");
+      const recipes = JSON.parse(json);
+      this.setState({ recipes: recipes});
+    }
+
+    componentDidUpdate = () => {
+      const recipes = JSON.stringify(this.state.recipes);
+      localStorage.setItem("recipes", recipes);
+    }
     
 //     this.handleChange = this.handleChange.bind(this);
 //     this.handleSubmit = this.handleSubmit.bind(this);
