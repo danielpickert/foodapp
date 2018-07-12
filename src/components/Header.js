@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import logo from "../logo.svg";
 import "../Style/Header.css";
+import axios from "axios";
 
 class Header extends Component {
   render() {
@@ -12,8 +13,13 @@ class Header extends Component {
             className="App-logo"
             alt="logo"
           />
+          <img
+            src="https://tedx.iiita.ac.in/img/about-image.jpg"
+            className="About-logo"
+            alt="logo"
+          />
           <h1 className="Header-title">Welcome The Recipe Hub</h1>
-          <div> A project designed Us </div>
+          <div> A project designed by Michelle, Maseeh and Daniel </div>
         </header>
         <p className="Header-intro">
           To get started, click on the recipe that you want to browse.

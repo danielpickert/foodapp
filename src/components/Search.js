@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../Style/Search.css";
+import axios from "axios";
 
 const Form = props => (
   <form onSubmit={props.getRecipe} style={{ marginBottom: "2rem" }}>
