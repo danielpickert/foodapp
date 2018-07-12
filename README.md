@@ -8,19 +8,7 @@ Create React App.
 
 You first need to install the following software...
 
-- npm install
-  "ajv": "^6.5.2",
-  "ajv-keywords": "^3.2.0",
-  "axios": "^0.18.0",
-  "body-parser": "^1.18.3",
-  "bootstrap": "^4.1.1",
-  "express": "^4.16.3",
-  "mongoose": "^5.2.2",
-  "nodemon": "^1.18.1",
-  "react": "^16.4.1",
-  "react-dom": "^16.4.1",
-  "react-router-dom": "^4.3.1",
-  "react-scripts": "1.1.4"
+- npm install ajv ajv-keywords axios body-parser bootstrap express mongoose nodemon react react-dom react-router-dom react-scripts
 
 A screenshot of your project running in the browser
 
