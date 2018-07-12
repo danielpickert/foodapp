@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import axios from "axios";
 import "../Style/Display.css";
 
 class Display extends Component {
