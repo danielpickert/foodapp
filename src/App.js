@@ -5,6 +5,7 @@ import axios from 'axios';
 import Form from './components/Form';
 import Recipes from './components/Recipes';
 
+
 // // API KEY for Food Recipes
 const API_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
 
@@ -40,13 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <h1 className="App-title">Welcome to The Recipe Hub</h1>
-          <img
-            src="https://comps.canstockphoto.com/recipes-3d-concept-stock-illustration_csp9417848.jpg"
-            className="App-logo"
-            alt="logo"
-          />
           
         </header>
         

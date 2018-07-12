@@ -1,19 +1,9 @@
-.App-logo {
-  height: 75px;
-  float: left;
-  width: 25%;
-}
-
-.App-intro {
-  font-size: large;
-}
-
 body {
   background: #f3f3f3;
 }
 
 img {
-  width: 45%;
+  width: 50%;
   height: 200px;
 }
 
