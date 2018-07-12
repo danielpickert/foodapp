@@ -25,15 +25,27 @@ class App extends Component {
         <header className="App-header">
           <Header name="Header" />
           <h1 className="App-title">Welcome The Recipe Hub</h1>
-          {/* <div>
-            <h3>A project designed by</h3>
+          <div>
+            {" "}
+            Designed by
             <h2>Daniel </h2>
             <h2>Maseeh </h2>
             <h2> && Michelle </h2>
-          </div> */}
+          </div>
         </header>
+
         <main>
-          <Switch>
+          To get started, search for a recipe!
+          <form action="/search/" method="GET">
+            <input
+              style={{ margin: "10px auto", display: "block", width: "140px" }}
+              type="text"
+              name="title"
+              placeholder="Name of dish or ingredient"
+            />
+            <input type="submit" value="Submit" class="btn" />
+          </form>
+      Switch>
             <Route path="/Display" component={Display} />
             <Route
               path="/Recipe/:title"
