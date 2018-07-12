@@ -11,7 +11,8 @@ import axios from 'axios';
 import Form from './components/Form';
 
 // // API KEY for Food Recipes
-// const FOOD_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
+const API_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
+
 
 
 class App extends Component {
@@ -21,11 +22,18 @@ class App extends Component {
   //       name: []
 
   //   }
+    state = {
+      recipes: []
+    }
 
-    getRecipe = (e) => {
+    getRecipe = async (e) => {
       const recipeName = e.target.elements.recipeName.value;
       e.preventDefault();
-      console.log(recipeName)
+      const api_call = await fetch(`http://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${API_KEY}&q=shredded%20chicken`);
+      
+      const data = await api_call.json();
+      this.setState({ recipes: data.recipes });
+      console.log(this.state.recipes)
     }
     
 //     this.handleChange = this.handleChange.bind(this);
@@ -85,6 +93,9 @@ class App extends Component {
         
         <div className="Form">
           <Form getRecipe={this.getRecipe} />
+          { this.state.recipes.map((recipe) => {
+            return <p>{ recipe.title }</p>
+          }) }
         </div>
 
       </div>
