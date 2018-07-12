@@ -1,12 +1,24 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./Style/App.css";
+import { Route, Switch } from "react-router-dom";
 import Display from "./components/Display.js";
 import Recipe from "./components/Recipe.js";
 import Header from "./components/Header.js";
 import Search from "./components/Search";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      recipe: null
+    };
+    this.setRecipe = this.setRecipe.bind(this);
+  }
+  setRecipe(recipe) {
+    this.setState({ recipe: recipe });
+  }
+
   render() {
     return (
       <div className="App">
@@ -20,12 +32,23 @@ class App extends Component {
             <h2> && Michelle </h2>
           </div> */}
         </header>
-        <p className="App-intro">
-          To get started, click on the recipe that you want to browse.
-          <Display name="The dish you selected" />
-          <Recipe name="Burger" />
-          <Search name="Search" />
-        </p>
+        <main>
+          <Switch>
+            <Route path="/Display" component={Display} />
+            <Route
+              path="/Recipe/:title"
+              render={routerParams => {
+                return;
+                <Recipe
+                  setRecipe={this.setRecipe}
+                  {...routerParams}
+                  {...this.state}
+                />;
+              }}
+            />
+            <Route path="/" component={Display} />
+          </Switch>
+        </main>
       </div>
     );
   }

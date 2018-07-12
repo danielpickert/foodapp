@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "../Style/Recipe.css";
+import axios from "axios";
 
 class Recipe extends Component {
   render() {
