@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./Style/App.css";
-import Display from "./components/Display.js";
 import Recipe from "./components/Recipe.js";
 import Header from "./components/Header.js";
 import Search from "./components/Search";
@@ -15,12 +14,9 @@ class App extends Component {
           <div>
             {" "}
             Designed by
-            <h2>Daniel </h2>
-            <h2>Maseeh </h2>
-            <h2> && Michelle </h2>
+            <h2>Daniel, Maseeh, & Michelle </h2>
           </div>
         </header>
-
         <main>
           To get started, search for a recipe!
           <form action="/search/" method="GET">
@@ -32,10 +28,7 @@ class App extends Component {
             />
             <input type="submit" value="Submit" class="btn" />
           </form>
-          {/* <Display name="The dish you selected" />
-          <Recipe name="Burger" />
-          <Header name="Header" />
-          <Search name="Search" /> */}
+          <Header name="poop" />
         </main>
       </div>
     );
