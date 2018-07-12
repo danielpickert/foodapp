@@ -1,71 +1,68 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./Style/App.css";
-import { Route, Switch } from "react-router-dom";
-import Display from "./components/Display.js";
-import Recipe from "./components/Recipe.js";
-import Header from "./components/Header.js";
-import Search from "./components/Search";
+import axios from 'axios';
+import Form from './components/Form';
+import Recipes from './components/Recipes';
+
+// // API KEY for Food Recipes
+const API_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
+
+
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      recipe: null
-    };
-    this.setRecipe = this.setRecipe.bind(this);
-  }
-  setRecipe(recipe) {
-    this.setState({ recipe: recipe });
-  }
+    state = {
+      recipes: []
+    }
+
+    getRecipe = async (e) => {
+      const recipeName = e.target.elements.recipeName.value;
+      e.preventDefault();
+      const api_call = await fetch(`http://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${API_KEY}&q=${recipeName}`);
+      
+      const data = await api_call.json();
+      this.setState({ recipes: data.recipes });
+      console.log(this.state.recipes)
+    }
+
+    componentDidMount = () => {
+      const json = localStorage.getItem("recipes");
+      const recipes = JSON.parse(json);
+      this.setState({ recipes: recipes});
+    }
+
+    componentDidUpdate = () => {
+      const recipes = JSON.stringify(this.state.recipes);
+      localStorage.setItem("recipes", recipes);
+    }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <Header name="Header" />
-          <h1 className="App-title">Welcome The Recipe Hub</h1>
-          <div>
-            {" "}
-            Designed by
-            <h2>Daniel, Maseeh, & Michelle </h2>
-          </div>
+          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+          <h1 className="App-title">Welcome to The Recipe Hub</h1>
+          <img
+            src="https://comps.canstockphoto.com/recipes-3d-concept-stock-illustration_csp9417848.jpg"
+            className="App-logo"
+            alt="logo"
+          />
+          
         </header>
+        
+        <div className="Form">
+          <Form getRecipe={this.getRecipe} />
+          <Recipes recipes={this.state.recipes} />
+        </div>
 
-        <main>
-          To get started, search for a recipe!
-          <form action="/search/" method="GET">
-            <input
-              style={{ margin: "10px auto", display: "block", width: "140px" }}
-              type="text"
-              name="title"
-              placeholder="Name of dish or ingredient"
-            />
-            <input type="submit" value="Submit" class="btn" />
-          </form>
-<<<<<<< HEAD
-          <Header name="poop" />
-=======
-      Switch>
-            <Route path="/Display" component={Display} />
-            <Route
-              path="/Recipe/:title"
-              render={routerParams => {
-                return;
-                <Recipe
-                  setRecipe={this.setRecipe}
-                  {...routerParams}
-                  {...this.state}
-                />;
-              }}
-            />
-            <Route path="/" component={Display} />
-          </Switch>
->>>>>>> b0d182308c12b3d4cc933729445bc4b7647b82ac
-        </main>
       </div>
+    
     );
   }
+
+
 }
+
+
 
 export default App;
