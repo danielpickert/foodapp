@@ -11,8 +11,6 @@ import axios from 'axios';
 // const FOOD_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
 
 
-
-
 class App extends Component {
 
 componentDidMount() {
