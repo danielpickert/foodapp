@@ -94,7 +94,7 @@ class App extends Component {
         
         <div className="Form">
           <Form getRecipe={this.getRecipe} />
-          <Recipes />
+          <Recipes recipes={this.state.recipes} />
         </div>
 
       </div>
