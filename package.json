@@ -2,6 +2,9 @@
   "name": "foodapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://danielpickert.github.io/foodapp",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
   "dependencies": {
     "ajv": "^6.5.2",
     "ajv-keywords": "^3.2.0",
@@ -20,7 +23,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
-  "proxy": "http://localhost:3001"
+  "devDependencies": {
+    "gh-pages": "^1.2.0"
+  }
 }
