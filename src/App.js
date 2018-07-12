@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./Style/App.css";
-// import Display from "./components/Display.js";
-// import Recipe from "./components/Recipe.js";
-// import Header from "./components/Header.js";
-// import Search from "./components/Search";
-// import Display from "./components/Display.js";
-// import Recipe from "./components/Recipe.js";
 import axios from 'axios';
 import Form from './components/Form';
 import Recipes from './components/Recipes';
@@ -41,7 +35,6 @@ class App extends Component {
       const recipes = JSON.stringify(this.state.recipes);
       localStorage.setItem("recipes", recipes);
     }
-
 
   render() {
     return (
