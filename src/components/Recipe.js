@@ -1,13 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import Axios from "../../node_modules/axios";
 
-const API_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
+const API_KEY = "e932a4dbf99f934fb4163d7391dc9865";
 
 class Recipe extends React.Component {
-	state = {
-		activeRecipe: []
-	}
-
+  state = {
+    activeRecipe: []
+  };
 	componentDidMount = async () => {
 	  const title = this.props.location.state.recipe;
       const req = await fetch 
@@ -28,7 +28,7 @@ class Recipe extends React.Component {
 						<h4 className="active-recipe__publisher">
 							Publisher: <span>{recipe.publisher}</span>
 						</h4>
-						<p className="active-recipe__website">
+						<p className="active-recipe__">
 							Recipe: <span><a href={recipe.f2f_url}>{recipe.f2f_url}</a></span></p>
 						<button className="active-recipe__button">
 						<Link to="/">Go Home</Link>
@@ -38,6 +38,6 @@ class Recipe extends React.Component {
 			</div>
 		);
 	}
-}
+
 
 export default Recipe;
