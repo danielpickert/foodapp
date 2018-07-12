@@ -29,7 +29,7 @@ class App extends Component {
     getRecipe = async (e) => {
       const recipeName = e.target.elements.recipeName.value;
       e.preventDefault();
-      const api_call = await fetch(`http://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${API_KEY}&q=shredded%20chicken`);
+      const api_call = await fetch(`http://cors-anywhere.herokuapp.com/http://food2fork.com/api/search?key=${API_KEY}&q=${recipeName}`);
       
       const data = await api_call.json();
       this.setState({ recipes: data.recipes });
@@ -94,7 +94,12 @@ class App extends Component {
         <div className="Form">
           <Form getRecipe={this.getRecipe} />
           { this.state.recipes.map((recipe) => {
-            return <p>{ recipe.title }</p>
+            return (
+              <div key={recipe.recipe_id}>
+              <img src={recipe.image_url} alt={recipe.title}/>
+              <p>{recipe.title}</p>
+              </div>
+              )
           }) }
         </div>
 
