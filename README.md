@@ -31,7 +31,6 @@ A screenshot of your project running in the browser
 - Mongo
 - Heroku
 - Express
-- Handlebars
 - Mongoose
 - React
 - axios
