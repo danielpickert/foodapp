@@ -1,21 +1,7 @@
-// import React, { Component } from "react";
-// // import logo from "./logo.svg";
-// import "../Style/Recipe.css";
+import React from 'react';
 
-// class Recipe extends Component {
-//   render() {
-//     return (
-//       <div className="Recipe">
-//         <header className="Recipe-header">
-//           { <img src={logo} className="App-logo" alt="logo" /> }
-//           <h1 className="Recipe-title">
-//             The recipe for {this.props.name} is below{" "}
-//           </h1>
-//         </header>
-//         <p>{this.props.name}</p>
-//       </div>
-//     );
-//   }
-// }
+const Recipe = () => (
+	<div>Recipe component!</div>
+	);
 
-// export default Recipe;
+export default Recipe;
