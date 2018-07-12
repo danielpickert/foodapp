@@ -58,6 +58,10 @@ button:hover {
   overflow: hidden;
 }
 
+.recipe__box-img {
+  width: 80%;
+}
+
 .recipe__text {
   margin-left: 15px;
 }
@@ -125,7 +129,9 @@ input:-webkit-autofill {
 }
 
 .active-recipe__img {
-  height: 500px !important;
+  height: 100%;
+  width: 100%;
+  margin-top: 20px;
 }
 
 .active-recipe__title {
