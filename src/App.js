@@ -9,6 +9,7 @@ import "./Style/App.css";
 // import Recipe from "./components/Recipe.js";
 import axios from 'axios';
 import Form from './components/Form';
+import Recipes from './components/Recipes';
 
 // // API KEY for Food Recipes
 const API_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
@@ -93,14 +94,7 @@ class App extends Component {
         
         <div className="Form">
           <Form getRecipe={this.getRecipe} />
-          { this.state.recipes.map((recipe) => {
-            return (
-              <div key={recipe.recipe_id}>
-              <img src={recipe.image_url} alt={recipe.title}/>
-              <p>{recipe.title}</p>
-              </div>
-              )
-          }) }
+          <Recipes />
         </div>
 
       </div>
