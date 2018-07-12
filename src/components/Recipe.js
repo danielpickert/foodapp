@@ -38,5 +38,6 @@ class Recipe extends React.Component {
 			</div>
 		);
 	}
+}
 
 export default Recipe;
