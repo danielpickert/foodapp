@@ -11,26 +11,32 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
           <h1 className="App-title">Welcome to The Recipe Hub</h1>
-          <div> A project designed by </div>
-          <h2>Daniel </h2>
-          <h2>Maseeh </h2>
-          <h2> && Michelle </h2>
+          <div>
+            {" "}
+            Designed by
+            <h2>Daniel </h2>
+            <h2>Maseeh </h2>
+            <h2> && Michelle </h2>
+          </div>
         </header>
-        
-        <p className="App-intro">
-          To get started, search for a recipe!
 
+        <main>
+          To get started, search for a recipe!
           <form action="/search/" method="GET">
-            <input style={{ margin:"10px auto", display: "block", width: "140px" }} type="text" name="title" placeholder="Name of dish or ingredient" />
+            <input
+              style={{ margin: "10px auto", display: "block", width: "140px" }}
+              type="text"
+              name="title"
+              placeholder="Name of dish or ingredient"
+            />
             <input type="submit" value="Submit" class="btn" />
           </form>
-          <Display name="The dish you selected" />
+          {/* <Display name="The dish you selected" />
           <Recipe name="Burger" />
           <Header name="Header" />
-          <Search name="Search" />
-        </p>
+          <Search name="Search" /> */}
+        </main>
       </div>
     );
   }
