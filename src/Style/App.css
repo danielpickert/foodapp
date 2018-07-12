@@ -11,6 +11,7 @@ a {
   color: #e74c3c !important;
 }
 
+
 button:hover {
   color: white;
   cursor: pointer;
@@ -42,7 +43,7 @@ button:hover {
   background: transparent;
   padding: 0.4rem 0.6rem;
   margin: 0 0.2rem;
-  border-radius: 1px;
+  border-radius: 5px;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
