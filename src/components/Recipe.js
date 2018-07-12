@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Axios from "../../node_modules/axios";
 
 const API_KEY = "e932a4dbf99f934fb4163d7391dc9865";
 

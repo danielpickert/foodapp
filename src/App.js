@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 // import logo from "./logo.svg";
 import "./Style/App.css";
-import axios from 'axios';
 import Form from './components/Form';
 import Recipes from './components/Recipes';
 
