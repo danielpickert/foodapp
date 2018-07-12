@@ -5,13 +5,20 @@ import "./Style/App.css";
 // import Recipe from "./components/Recipe.js";
 // import Header from "./components/Header.js";
 // import Search from "./components/Search";
+import Display from "./components/Display.js";
+import Recipe from "./components/Recipe.js";
 import axios from 'axios';
 
 // // API KEY for Food Recipes
 // const FOOD_KEY = 'e932a4dbf99f934fb4163d7391dc9865';
 
 
+
 class App extends Component {
+  state = {
+    title: undefined
+  }
+
 
 componentDidMount() {
   axios.get("http://localhost:3000/search/salt")
@@ -19,7 +26,6 @@ componentDidMount() {
     console.log(res)
     })
 }
-
 
   render() {
     return (
