@@ -15,9 +15,7 @@ class App extends Component {
           <div>
             {" "}
             Designed by
-            <h2>Daniel </h2>
-            <h2>Maseeh </h2>
-            <h2> && Michelle </h2>
+            <h2>Daniel, Maseeh, & Michelle </h2>
           </div>
         </header>
 
@@ -32,10 +30,7 @@ class App extends Component {
             />
             <input type="submit" value="Submit" class="btn" />
           </form>
-          {/* <Display name="The dish you selected" />
-          <Recipe name="Burger" />
-          <Header name="Header" />
-          <Search name="Search" /> */}
+          <Header name="poop" />
         </main>
       </div>
     );

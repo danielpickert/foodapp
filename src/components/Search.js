@@ -1,16 +1,11 @@
 import React, { Component } from "react";
 import "../Style/Search.css";
 
-class Search extends Component {
-  render() {
-    return (
-      <div className="Search">
-        <header className="Search-header">
-          <p>{this.props.name} gg </p>
-        </header>
-      </div>
-    );
-  }
-}
+const Form = props => (
+  <form onSubmit={props.getRecipe} style={{ marginBottom: "2rem" }}>
+    <input className="form__input" type="text" name="recipeName" />
+    <button className="form__button">Search</button>
+  </form>
+);
 
-export default Search;
+export default Form;
