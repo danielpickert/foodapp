@@ -16,18 +16,37 @@
 
 4.  What functions will we need?
 
-- display recipe name
-- fetch recipe
+- Display recipe name
+- Fetch recipe
 - Link to go Home
+- Event listener for click
+- Authentication
+
+## Allocate Duties
+
+# Daniel
+
+- Mock Component Draw Up
+- Api pull
+- Deployment
+- Merge review
+
+# Maseeh
+
+- Scaffolding
+- Authentication
+- Merge Review
+- Final Review
+
+# Michelle
+
+- ERD
+- Intial Component Build
+- Styling
+- Creation of Planning Docs
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
+
 You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
-
-## Table of Contents
-
-- [Updating to New Releases](#updating-to-new-releases)
-- [Sending Feedback](#sending-feedback)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
