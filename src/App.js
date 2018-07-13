@@ -42,6 +42,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Welcome to The Recipe Hub</h1>
+          <h4 className="App-subheader">Search by dish title or ingredient</h4>
           
         </header>
         

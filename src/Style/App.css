@@ -38,6 +38,10 @@ button:hover {
   font-size: 1.5em;
 }
 
+.App-subheader {
+  font-size: 0.7em;
+}
+
 .recipe_buttons {
   border: solid 2px #e74c3c;
   background: transparent;
