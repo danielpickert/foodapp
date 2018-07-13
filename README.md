@@ -1,8 +1,8 @@
-# Project #3 Recipe Hub
+# Project #3 The Recipe Hub
 
-This app allows users to Create a search for recipes by inputting the name of the dish or an ingredient in the recipe. The app Reads the request and Renders photos and links to various food items. If you click on the photo the page will redirect to another component which contains the web address of the recipe you clicked on. If you click on the icon on the go home button you can Update the search field to produce a new search.
+This app allows users to search for recipes by entering the name of the dish or ingredient in the search bar. The app reads the request and retreieves photos and links to various food items. If you click on 'View Recipe', the page will redirect to another component which contains the web address of the recipe you clicked on. 
 
-## Prerequisites
+## Features
 
 Create React App.
 
@@ -10,11 +10,10 @@ You first need to install the following software...
 
 - npm install ajv ajv-keywords axios body-parser bootstrap express mongoose nodemon react react-dom react-router-dom react-scripts
 
-A screenshot of your project running in the browser
 
 <img width="1252" alt="screen shot 2018-07-12 at 3 52 50 pm" src="https://user-images.githubusercontent.com/38504548/42657517-705e9338-85f0-11e8-84fb-39006c8af9af.png">
 
-### List of Technologies Used
+### Technologies Used
 
 - Mongo
 - Heroku
