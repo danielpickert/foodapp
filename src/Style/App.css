@@ -178,7 +178,7 @@ input:-webkit-autofill {
   font-weight: 500;
 }
 
-@media and (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .form__input {
     width: 30%;
   }
