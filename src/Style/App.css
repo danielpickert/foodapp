@@ -177,3 +177,9 @@ input:-webkit-autofill {
   text-transform: uppercase;
   font-weight: 500;
 }
+
+@media and (max-width: 800px) {
+  .form__input {
+    width: 30%;
+  }
+}
